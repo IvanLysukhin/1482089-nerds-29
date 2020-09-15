@@ -1,0 +1,255 @@
+:root {
+  --basic-black: #000000;
+  --basic-dark-grey: #283136;
+  --basic-light-grey: #EEEEEE;
+  --basic-lighter-grey: #666666;
+  --basic-white: #FFFFFF;
+  --basic-light-red: #FB565A;
+  --basic-dark-red: #E74246;
+  --basic-darkest-red: #D7373B;
+  --basic-green: #00CA74;
+  --basic-dark-green: #00BC6C;
+  --basic-darkest-green: #00AA62;
+  --basic-yellow: #EFC849;
+  --basic-dark-yellow: #EAB534;
+  --basic-darkest-yellow: #E5A722;
+}
+
+/*Fonts*/
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/roboto-v20-latin_cyrillic-regular.eot');
+  src: local('Roboto'), local('Roboto-Regular'),
+    url('../fonts/roboto.woff2') format('woff2'),
+    url('../fonts/roboto.woff') format('woff')
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/roboto-v20-latin_cyrillic-500.eot');
+  src: local('Roboto Medium'), local('Roboto-Medium'),
+    url('../fonts/robotomedium.woff.woff2') format('woff2'),
+    url('../fonts/robotomedium.woff') format('woff')
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/roboto-v20-latin_cyrillic-700.eot');
+  src: local('Roboto Bold'), local('Roboto-Bold'),
+    url('../fonts/robotobold') format('woff2'),
+    url('../fonts/robotobold.woff') format('woff')
+}
+
+.page {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  color: var(--basic-dark-grey);
+  line-height: 24px;
+  font-weight: normal;
+}
+
+.page-body {}
+
+.main-header {
+  background-color: var(--basic-light-grey);
+  font-weight: 500;
+  line-height: 30px;
+  color: var(--basic-black);
+}
+
+.main-navigation {}
+
+.main-logo {}
+
+.navigation-list {
+  list-style: none;
+  text-transform: uppercase;
+}
+
+.navigation-item {
+  text-decoration: none;
+  color: var(--basic-black);
+}
+
+.navigation-item:hover {
+  color: var(--basic-light-red);
+}
+
+.navigation-item:active {
+  color: var(--basic-black);
+  opacity: 0.3;
+}
+
+.header-cart {
+  text-decoration: none;
+  color: var(--basic-black);
+}
+
+.container {}
+
+.promo-slider {
+  background-color: var(--basic-light-grey);
+}
+
+.promo-text-big {
+  font-size: 55px;
+  line-height: 55px;
+  font-weight: 500;
+  color: var(--basic-black);
+}
+
+.button {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  text-decoration: none;
+  color: var(--basic-white);
+  background-color: var(--basic-light-red);
+  text-transform: uppercase;
+}
+
+.button:hover {
+  background-color: var(--basic-dark-red);
+}
+
+.button:active {
+  background-color: var(--basic-darkest-red);
+  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+}
+
+.services {}
+
+.services-list {
+  list-style: none;
+}
+
+.services-item {}
+
+.services-title {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  color: var(--basic-black);
+  text-transform: uppercase;
+}
+
+.button-app {
+  background-color: var(--basic-green);
+}
+
+.button-app:hover {
+  background-color: var(--basic-dark-green);
+}
+
+.button-app:active {
+  background-color: var(--basic-darkest-green);
+  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+}
+
+.button-presentation {
+  background-color: var(--basic-yellow);
+}
+
+.button-presentation:hover {
+  background-color: var(--basic-dark-yellow);
+}
+
+.button-presentation:active {
+  background-color: var(--basic-darkest-yellow);
+  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+}
+
+.studio-description {}
+
+.description-big-text {
+  font-weight: 500;
+  font-size: 45px;
+  line-height: 45px;
+  color: var(--basic-black);
+}
+
+.list-text {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.tasks-list {}
+
+.tasks-list-item {
+  line-height: 24px;
+}
+
+.advantages {}
+
+.advantages-text {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+
+.advantages-head {
+  font-weight: bold;
+  font-size: 45px;
+  line-height: 64px;
+  color: var(--basic-black);
+}
+
+.advantages-name {
+  line-height: 18px;
+}
+
+.partners {}
+
+.partners-list {}
+
+.main-footer {}
+
+.contacts {
+  line-height: 18px;
+  color: var(--basic-lighter-grey);
+}
+
+.contacts-title {
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+
+.adress {}
+
+.phone {
+  text-decoration: none;
+  color: var(--basic-black);
+}
+
+.contact-button {}
+
+.social {}
+
+.social-big-text {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 36px;
+  color: var(--basic-black);
+}
+
+.social-list {}
+
+.social-button {
+  background: linear-gradient(0deg, #E1E1E1, #E1E1E1);
+}
+
+.social-button:hover {
+  background: linear-gradient(0deg, #E74246, #E74246);
+}
+
+.social-button:active {
+  background: linear-gradient(0deg, #D7373B, #D7373B);
+}
