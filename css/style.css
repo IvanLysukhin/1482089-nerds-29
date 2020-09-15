@@ -13,6 +13,9 @@
   --basic-yellow: #EFC849;
   --basic-dark-yellow: #EAB534;
   --basic-darkest-yellow: #E5A722;
+  --basic-gradient-white: #E1E1E1;
+  --basic-gradient-red: #E74246;
+  --basic-gradient-dark-red: #D7373B;
 }
 
 /*Fonts*/
@@ -47,14 +50,12 @@
 }
 
 .page {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
   color: var(--basic-dark-grey);
   line-height: 24px;
   font-weight: normal;
 }
-
-.page-body {}
 
 .main-header {
   background-color: var(--basic-light-grey);
@@ -63,35 +64,30 @@
   color: var(--basic-black);
 }
 
-.main-navigation {}
-
-.main-logo {}
-
-.navigation-list {
+.navigation-list,
+.services-list {
   list-style: none;
-  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
 }
 
-.navigation-item {
-  text-decoration: none;
-  color: var(--basic-black);
-}
-
-.navigation-item:hover {
-  color: var(--basic-light-red);
-}
-
-.navigation-item:active {
-  color: var(--basic-black);
-  opacity: 0.3;
-}
-
+.navigation-item,
 .header-cart {
   text-decoration: none;
   color: var(--basic-black);
+  text-transform: uppercase;
 }
 
-.container {}
+.navigation-item:hover,
+.header-cart:hover {
+  color: var(--basic-light-red);
+}
+
+.navigation-item:active,
+.header-cart:active {
+  color: var(--basic-black);
+  opacity: 0.3;
+}
 
 .promo-slider {
   background-color: var(--basic-light-grey);
@@ -123,14 +119,6 @@
   box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
 }
 
-.services {}
-
-.services-list {
-  list-style: none;
-}
-
-.services-item {}
-
 .services-title {
   font-weight: bold;
   font-size: 24px;
@@ -139,33 +127,31 @@
   text-transform: uppercase;
 }
 
-.button-app {
+.button-green {
   background-color: var(--basic-green);
 }
 
-.button-app:hover {
+.button-green:hover {
   background-color: var(--basic-dark-green);
 }
 
-.button-app:active {
+.button-green:active {
   background-color: var(--basic-darkest-green);
   box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
 }
 
-.button-presentation {
+.button-yellow {
   background-color: var(--basic-yellow);
 }
 
-.button-presentation:hover {
+.button-yellow:hover {
   background-color: var(--basic-dark-yellow);
 }
 
-.button-presentation:active {
+.button-yellow:active {
   background-color: var(--basic-darkest-yellow);
   box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
 }
-
-.studio-description {}
 
 .description-big-text {
   font-weight: 500;
@@ -179,13 +165,9 @@
   font-weight: bold;
 }
 
-.tasks-list {}
-
 .tasks-list-item {
   line-height: 24px;
 }
-
-.advantages {}
 
 .advantages-text {
   font-weight: bold;
@@ -204,12 +186,6 @@
   line-height: 18px;
 }
 
-.partners {}
-
-.partners-list {}
-
-.main-footer {}
-
 .contacts {
   line-height: 18px;
   color: var(--basic-lighter-grey);
@@ -222,16 +198,10 @@
   color: var(--basic-black);
 }
 
-.adress {}
-
 .phone {
   text-decoration: none;
   color: var(--basic-black);
 }
-
-.contact-button {}
-
-.social {}
 
 .social-big-text {
   font-weight: bold;
@@ -240,16 +210,14 @@
   color: var(--basic-black);
 }
 
-.social-list {}
-
 .social-button {
-  background: linear-gradient(0deg, #E1E1E1, #E1E1E1);
+  background: linear-gradient(0deg, var(--basic-gradient-white), var(var(--basic-gradient-white)));
 }
 
 .social-button:hover {
-  background: linear-gradient(0deg, #E74246, #E74246);
+  background: linear-gradient(0deg, var(basic-gradient-red), var(basic-gradient-red));
 }
 
 .social-button:active {
-  background: linear-gradient(0deg, #D7373B, #D7373B);
+  background: linear-gradient(0deg, var(--basic-gradient-dark-red), var(--basic-gradient-dark-red));
 }
