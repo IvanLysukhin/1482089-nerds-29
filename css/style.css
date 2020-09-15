@@ -3,7 +3,10 @@
   --basic-dark-grey: #283136;
   --basic-light-grey: #EEEEEE;
   --basic-lighter-grey: #666666;
+  --basic-button-grey: #DFDFDF;
+  --basic-button-dark-grey: #D5D5D5;
   --basic-white: #FFFFFF;
+  --basic-gradient-white: #E1E1E1;
   --basic-light-red: #FB565A;
   --basic-dark-red: #E74246;
   --basic-darkest-red: #D7373B;
@@ -13,7 +16,6 @@
   --basic-yellow: #EFC849;
   --basic-dark-yellow: #EAB534;
   --basic-darkest-yellow: #E5A722;
-  --basic-gradient-white: #E1E1E1;
   --basic-gradient-red: #E74246;
   --basic-gradient-dark-red: #D7373B;
 }
@@ -65,7 +67,13 @@
 }
 
 .navigation-list,
-.services-list {
+.services-list,
+.filters-list,
+.templates-list,
+.pagination-lis,
+.social-list,
+.partners-list,
+.pagination-list {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -220,4 +228,82 @@
 
 .social-button:active {
   background: linear-gradient(0deg, var(--basic-gradient-dark-red), var(--basic-gradient-dark-red));
+}
+
+/*catalog.html*/
+.catalog-title {
+  font-weight: 500;
+  font-size: 55px;
+  line-height: 55px;
+  background-color: var(--basic-light-grey);
+  color: var(--basic-black);
+}
+
+.filters {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.form-name {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
+  color: var(--basic-black);
+  text-transform: uppercase;
+}
+
+.catalog-button {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  border: none;
+  background-color: var(--basic-light-grey);
+}
+
+.form-button:hover {
+  background-color: var(--basic-button-grey);
+}
+
+.form-button:active {
+  background-color: var(--basic-button-dark-grey);
+}
+
+.opacity:active {
+  opacity: 0.3;
+}
+
+.preview {
+  color: var(--basic-lighter-grey);
+  background-color: var(--basic-light-grey);
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.preview-title {
+  color: var(--basic-black);
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.pagination-item a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--basic-black);
+  background-color: var(--basic-light-grey);
+}
+
+.pagination-item a:hover {
+  background-color: var(--basic-button-grey);
+}
+
+.current a {
+  background-color: var(--basic-white);
+  border: 3px solid var(--basic-button-dark-grey);
 }
