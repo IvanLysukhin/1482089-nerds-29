@@ -219,15 +219,15 @@
 }
 
 .social-button {
-  background: linear-gradient(0deg, var(--basic-gradient-white), var(var(--basic-gradient-white)));
+  background-color: var(--basic-gradient-white);
 }
 
 .social-button:hover {
-  background: linear-gradient(0deg, var(basic-gradient-red), var(basic-gradient-red));
+  background-color: linear-gradient(0deg, var(basic-gradient-red), var(basic-gradient-red));
 }
 
 .social-button:active {
-  background: linear-gradient(0deg, var(--basic-gradient-dark-red), var(--basic-gradient-dark-red));
+  background-color: linear-gradient(0deg, var(--basic-gradient-dark-red), var(--basic-gradient-dark-red));
 }
 
 /*catalog.html*/
@@ -306,4 +306,12 @@
 .current a {
   background-color: var(--basic-white);
   border: 3px solid var(--basic-button-dark-grey);
+}
+
+.preview {
+  display: none;
+}
+
+.templates-list:hover .preview {
+  display: block;
 }
