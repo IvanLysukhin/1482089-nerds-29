@@ -25,7 +25,6 @@
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
-  src: url('../fonts/roboto-v20-latin_cyrillic-regular.eot');
   src: local('Roboto'), local('Roboto-Regular'),
     url('../fonts/roboto.woff2') format('woff2'),
     url('../fonts/roboto.woff') format('woff')
@@ -35,9 +34,8 @@
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 500;
-  src: url('../fonts/roboto-v20-latin_cyrillic-500.eot');
   src: local('Roboto Medium'), local('Roboto-Medium'),
-    url('../fonts/robotomedium.woff.woff2') format('woff2'),
+    url('../fonts/robotomedium.woff2') format('woff2'),
     url('../fonts/robotomedium.woff') format('woff')
 }
 
@@ -45,9 +43,8 @@
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
-  src: url('../fonts/roboto-v20-latin_cyrillic-700.eot');
   src: local('Roboto Bold'), local('Roboto-Bold'),
-    url('../fonts/robotobold') format('woff2'),
+    url('../fonts/robotobold.woff2') format('woff2'),
     url('../fonts/robotobold.woff') format('woff')
 }
 
