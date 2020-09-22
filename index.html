@@ -11,30 +11,38 @@
 
 <body class="page-body">
   <header class="main-header">
-    <nav class="main-navigation">
-      <a class="main-logo" href="#"><img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип дизайн-студия Nerds"></a>
-      <ul class="navigation-list">
-        <li><a class="navigation-item" href="studio.html">Студия</a></li>
-        <li><a class="navigation-item" href="clients.html">Клиенты</a></li>
-        <li><a class="navigation-item" href="catalog.html">Магазин</a></li>
-        <li><a class="navigation-item" href="contacts.html">Контакты</a></li>
-      </ul>
-      <a class="header-cart" href="blank.html"><svg width="15" height="15" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M4.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM12.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM15 2H4.07l-.422-2H0v2h2.031l1.985 9H15V9H9.441L15 6.951V2z" fill="#A6A6A6" />
-        </svg>Корзина</a>
-    </nav>
+    <div class="container">
+      <nav class="main-navigation">
+        <a class="main-logo" href="#"><img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип дизайн-студия Nerds"></a>
+        <ul class="navigation-list position">
+          <li><a class="navigation-item" href="studio.html">Студия</a></li>
+          <li><a class="navigation-item" href="clients.html">Клиенты</a></li>
+          <li><a class="navigation-item" href="catalog.html">Магазин</a></li>
+          <li><a class="navigation-item" href="contacts.html">Контакты</a></li>
+        </ul>
+        <a class="header-cart" href="blank.html"><svg width="15" height="15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM12.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM15 2H4.07l-.422-2H0v2h2.031l1.985 9H15V9H9.441L15 6.951V2z" fill="#A6A6A6" />
+          </svg>Корзина</a>
+      </nav>
+    </div>
   </header>
-  <main class="container">
-    <h1>Дизайн-студия Nerds</h1>
+  <main class="main-container">
+    <h1 class="visually-hidden">Дизайн-студия Nerds</h1>
     <section class="promo-slider">
-      <h2>Рекламный блок</h2>
-      <p class="promo-text-big">Долго, дорого,скрупулезно</p>
-      <p>Математически выверенный дизайн<br> для вашего сайта или мобильного приложения</p>
-      <a class="button" href="catalog.html">Узнать больше</a>
-      <img src="img/nerds-slide-phones.png" width="760" height="431" alt="Промо картинка">
+      <div class="promo-box container">
+        <div class="promo-text">
+          <h2 class="visually-hidden">Рекламный блок</h2>
+          <p class="promo-text-big">Долго, дорого,<br>скрупулезно</p>
+          <p>Математически выверенный дизайн<br> для вашего сайта или мобильного приложения</p>
+          <a class="button" href="catalog.html">Узнать больше</a>
+        </div>
+        <div class="promo-pic">
+          <img src="img/nerds-slide-phones.png" width="760" height="431" alt="Промо картинка">
+        </div>
+      </div>
     </section>
-    <section class="services">
-      <h2>Услуги</h2>
+    <section class="services container">
+      <h2 class="visually-hidden">Услуги</h2>
       <ul class="services-list">
         <li class="services-item">
           <img src="img/web-sites.jpg" width="300" height="146" alt="Сайты">
@@ -56,62 +64,70 @@
         </li>
       </ul>
     </section>
-    <section class="studio-description">
-      <h2>О нас</h2>
-      <p class="description-big-text">Мы - маленькая, но гордая<br> дизайн-студия из Краснодара.</p>
-      <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет превыше креатива. Работаем не покладая рук, как роботы.</p>
-      <p class="list-text">Выполняем заказы на разработку:</p>
-      <ul class="tasks-list">
-        <li class="tasks-list-item">Веб-сайтов любой сложности</li>
-        <li class="tasks-list-item">Мобильны приложений для iOS И Android</li>
-        <li class="tasks-list-item">Слайдшоу и видео для корпоративных презентаций</li>
-      </ul>
+    <section class="studio-description container">
+      <div>
+        <h2 class="visually-hidden">О нас</h2>
+        <p class="description-big-text">Мы - маленькая, но гордая<br> дизайн-студия из Краснодара.</p>
+        <p>Исповедуем принципы минимализма и чистоты. Ставим математический расчет<br> превыше креатива. Работаем не покладая рук, как роботы.</p>
+        <p class="list-text">Выполняем заказы на разработку:</p>
+        <ul class="tasks-list">
+          <li class="tasks-list-item">Веб-сайтов любой сложности</li>
+          <li class="tasks-list-item">Мобильны приложений для iOS И Android</li>
+          <li class="tasks-list-item">Слайдшоу и видео для корпоративных презентаций</li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="visually-hidden">Наши преимущества</h2>
+        <img src="img/big-logo-nerds.jpg" width="360" height="208" alt="Логотип дизайн-студии Nerds">
+        <p class="advantages-text">с 2004 года любим точность во всем:</p>
+        <table class="advantages">
+          <tr>
+            <th class="advantages-head">146%</th>
+            <th class="advantages-head">100%</th>
+            <th class="advantages-head">50%</th>
+          </tr>
+          <tr>
+            <td class="advantages-name">Уровень<br> самоотдачи</td>
+            <td class="advantages-name">Соблюдение<br> сроков</td>
+            <td class="advantages-name">Минимальна<br> предоплата</td>
+          </tr>
+        </table>
+      </div>
     </section>
-    <section class="advantages">
-      <h2>Наши преимущества</h2>
-      <img src="img/big-logo-nerds.jpg" width="360" height="208" alt="Логотип дизайн-студии Nerds">
-      <p class="advantages-text">с 2004 года любим точность во всем:</p>
-      <table class="advantages">
-        <tr>
-          <th class="advantages-head">146%</th>
-          <th class="advantages-head">100%</th>
-          <th class="advantages-head">50%</th>
-        </tr>
-        <tr>
-          <td class="advantages-name">Уровень<br> самоотдачи</td>
-          <td class="advantages-name">Соблюдение<br> сроков</td>
-          <td class="advantages-name">Минимальна<br> предоплата</td>
-        </tr>
-      </table>
-    </section>
-    <section class="partners">
-      <h2>Партнёры</h2>
+    <section class="partners container">
+      <h2 class="visually-hidden">Партнёры</h2>
       <ul class="partners-list">
-        <li class="partners-list"><a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/html-academy-logo.svg" width="199" height="68" alt="HTML Academy"></a></li>
-        <li class="partners-list"><a href="#"><img src="img/borodinski-logo.png" width="209" height="90" alt="Barbershop Borodinski"></a></li>
-        <li class="partners-list"><a href="#"><img src="img/pink-logo.png" width="185" height="52" alt="PINK"></a></li>
-        <li class="partners-list"><a href="#"><img src="img/mishka-logo.png" width="173" height="84" alt="Mishka"></a></li>
+        <li class="partners-item"><a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/html-academy-logo.svg" width="199" height="68" alt="HTML Academy"></a></li>
+        <li class="partners-item"><a href="#"><img src="img/borodinski-logo.png" width="209" height="90" alt="Barbershop Borodinski"></a></li>
+        <li class="partners-item"><a href="#"><img src="img/pink-logo.png" width="185" height="52" alt="PINK"></a></li>
+        <li class="partners-item"><a href="#"><img src="img/mishka-logo.png" width="173" height="84" alt="Mishka"></a></li>
       </ul>
     </section>
   </main>
   <footer class="main-footer">
-    <section class="contacts">
-      <h2>Контакты</h2>
+    <section class="contacts container">
+      <h2 class="visually-hidden">Контакты</h2>
       <h3 class="contacts-title">Nerds design studio</h3>
       <p class="adress">191186, Санкт-Петербург, ул.Б.Конюшенная, д.19/8</p>
       <a class="phone" href="tel:+78122757575">+7(812)275-75-75</a>
       <a class="button contact-button" href="#">Напишите нам</a>
-      <img src="img/map.jpg" width="1440" height="416" alt="Адрес:Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+      <img src="img/map.jpg" class="map" width="1440" height="416" alt="Адрес:Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
     </section>
-    <section class="social">
-      <h2>Социальные сети</h2>
-      <p class="social-big-text"><b>Давайте дружить, это выгодно!</b></p>
-      <p>Скидка 10% для друзей из социальных сетей.</p>
-      <ul class="social-list">
-        <li><a class="button social-button" href="https://vk.com"><img src="img/vk-icon.svg" width="26" height="15" alt="ВКонтакте">ВКонтакте</a></li>
-        <li><a class="button social-button" href="https://facebook.com"><img src="img/fb-icon.svg" width="12" height="22" alt="Facebook">Facebook</a></li>
-        <li><a class="button social-button" href="https://instagram.com"><img src="img/insta-icon.svg" width="21" height="21" alt="Instagram">Instagram</a></li>
-      </ul>
+    <section class="social container">
+      <div class="social-box">
+        <div class="social-text">
+          <h2 class="visually-hidden">Социальные сети</h2>
+          <p class="social-big-text"><b>Давайте дружить, это выгодно!</b></p>
+          <p>Скидка 10% для друзей из социальных сетей.</p>
+        </div>
+        <div class="social-links">
+          <ul class="social-list">
+            <li class="social-item"><a class="button social-button" href="https://vk.com"><img src="img/vk-icon.svg" width="26" height="15" alt="ВКонтакте">ВКонтакте</a></li>
+            <li class="social-item"><a class="button social-button" href="https://facebook.com"><img src="img/fb-icon.svg" width="12" height="22" alt="Facebook">Facebook</a></li>
+            <li class="social-item"><a class="button social-button" href="https://instagram.com"><img src="img/insta-icon.svg" width="21" height="21" alt="Instagram">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
     </section>
   </footer>
 </body>
