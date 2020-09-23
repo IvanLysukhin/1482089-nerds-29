@@ -9,26 +9,34 @@
   <title>HTML Academy: Нёрдс</title>
 </head>
 
-<body>
+<body class="page-body">
   <header class="main-header">
-    <nav class="main-navigation">
-      <a class="main-logo" href="index.html"><img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип дизайн-студия Nerds"></a>
-      <ul class="navigation-list">
-        <li><a class="navigation-item" href="studio.html">Студия</a></li>
-        <li><a class="navigation-item" href="clients.html">Клиенты</a></li>
-        <li><a class="navigation-item" href="catalog.html">Магазин</a></li>
-        <li><a class="navigation-item" href="contacts.html">Контакты</a></li>
-      </ul>
-      <a class="header-cart" href="blank.html"><svg width="15" height="15" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M4.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM12.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM15 2H4.07l-.422-2H0v2h2.031l1.985 9H15V9H9.441L15 6.951V2z" fill="#A6A6A6" />
-        </svg>Корзина</a>
-    </nav>
+    <div class="container">
+      <nav class="main-navigation">
+        <a class="main-logo" href="index.html"><img src="img/nerds-logo.svg" width="160" height="65" alt="Логотип дизайн-студия Nerds"></a>
+        <ul class="navigation-list position">
+          <li><a class="navigation-item" href="studio.html">Студия</a></li>
+          <li><a class="navigation-item" href="clients.html">Клиенты</a></li>
+          <li><a class="navigation-item" href="catalog.html">Магазин</a></li>
+          <li><a class="navigation-item" href="contacts.html">Контакты</a></li>
+        </ul>
+        <a class="header-cart" href="blank.html"><svg width="15" height="15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM12.5 15a1.5 1.5 0 100-3 1.5 1.5 0 000 3zM15 2H4.07l-.422-2H0v2h2.031l1.985 9H15V9H9.441L15 6.951V2z" fill="#A6A6A6" />
+          </svg>Корзина</a>
+      </nav>
+    </div>
   </header>
-  <main class="container">
+  <main class="main-container">
+    <div class="catalog-title-box">
+      <div class="catalog-title-box-position">
     <h1 class="catalog-title">Магазин готовых шаблонов</h1>
+  </div>
+  </div>
+  <div class="catalog-box container">
+    <div class="catalog-filters">
     <section class="filters">
-      <h2>Фильтры</h2>
-      <form>
+      <h2 class="visually-hidden">Фильтры</h2>
+      <form class="form-box">
         <fieldset class="price-form">
           <legend class="form-name">Стоимость:</legend>
           <!-- Здесь будет форма для фильтров -->
@@ -44,8 +52,23 @@
         <button class="catalog-button"><span class="opacity">Показать</span></button>
       </form>
     </section>
+  </div>
+  <div class="catalog-templates">
     <section class="templates">
-      <h2>Шаблоны сайтов</h2>
+      <h2 class="visually-hidden">Шаблоны сайтов</h2>
+      <div class="templates-box-sort">
+        <div class="box-sort-text">
+      <p class="form-name">Сортировать:</p>
+    </div>
+    <div class="box-sort-list">
+      <ul class="sort-list">
+        <li>По цене</li>
+        <li><a href="#" class="sort-item">По типу</a></li>
+        <li><a href="#" class="sort-item">По названию</a></li>
+      </ul>
+    </div>
+    </div>
+    <div class="templates-box">
       <ul class="templates-list">
         <li class="templates-item">
           <a href="#">
@@ -84,32 +107,45 @@
           </a>
         </li>
       </ul>
+    </div>
+    <div class="templates-box">
       <ul class="pagination-list">
         <li class="pagination-item current"><a>1</a></li>
         <li class="pagination-item"><a href="#">2</a></li>
         <li class="pagination-item"><a href="#">3</a></li>
+        <li class="pagination-item"><a href="#">Следующая</a></li>
       </ul>
-      <button class="catalog-button">Следующая</button>
+    </div>
     </section>
+  </div>
+  </div>
   </main>
   <footer class="main-footer">
-    <section class="contacts">
-      <h2>Контакты</h2>
-      <h3 class="contacts-title">Nerds design studio</h3>
-      <p class="adress">191186, Санкт-Петербург, ул.Б.Конюшенная, д.19/8</p>
-      <a class="phone" href="tel:+78122757575">+7(812)275-75-75</a>
-      <a class="button contact-button" href="#">Напишите нам</a>
-      <img src="img/map.jpg" width="1440" height="416" alt="Адрес:Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+    <section class="contacts container">
+      <h2 class="visually-hidden">Контакты</h2>
+      <div class="contact-box">
+        <h3 class="contacts-title">Nerds design studio</h3>
+        <p class="adress">191186, Санкт-Петербург, ул.Б.Конюшенная, д.19/8</p>
+        <a class="phone" href="tel:+78122757575">+7(812)275-75-75</a>
+        <a class="button contact-button" href="#">Напишите нам</a>
+      </div>
+      <img src="img/map.jpg" class="map" width="1440" height="416" alt="Адрес:Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
     </section>
-    <section class="social">
-      <h2>Социальные сети</h2>
-      <p class="social-big-text"><b>Давайте дружить, это выгодно!</b></p>
-      <p>Скидка 10% для друзей из социальных сетей.</p>
-      <ul class="social-list">
-        <li><a class="button social-button" href="https://vk.com"><img src="img/vk-icon.svg" width="26" height="15" alt="ВКонтакте">ВКонтакте</a></li>
-        <li><a class="button social-button" href="https://facebook.com"><img src="img/fb-icon.svg" width="12" height="22" alt="Facebook">Facebook</a></li>
-        <li><a class="button social-button" href="https://instagram.com"><img src="img/insta-icon.svg" width="21" height="21" alt="Instagram">Instagram</a></li>
-      </ul>
+    <section class="social container">
+      <div class="social-box">
+        <div class="social-text">
+          <h2 class="visually-hidden">Социальные сети</h2>
+          <p class="social-big-text"><b>Давайте дружить, это выгодно!</b></p>
+          <p>Скидка 10% для друзей из социальных сетей.</p>
+        </div>
+        <div class="social-links">
+          <ul class="social-list">
+            <li class="social-item"><a class="button social-button" href="https://vk.com"><img src="img/vk-icon.svg" width="26" height="15" alt="ВКонтакте">ВКонтакте</a></li>
+            <li class="social-item"><a class="button social-button" href="https://facebook.com"><img src="img/fb-icon.svg" width="12" height="22" alt="Facebook">Facebook</a></li>
+            <li class="social-item"><a class="button social-button" href="https://instagram.com"><img src="img/insta-icon.svg" width="21" height="21" alt="Instagram">Instagram</a></li>
+          </ul>
+        </div>
+      </div>
     </section>
   </footer>
 </body>
