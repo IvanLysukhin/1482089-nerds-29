@@ -298,11 +298,11 @@
   grid-template-columns: auto auto auto;
 }
 
-.social-item:hover {
+.social-button:hover {
   background-color: var(--basic-dark-red);
 }
 
-.social-item:active {
+.social-button:active {
   background-color: var(--basic-darkest-red);
 }
 
@@ -324,12 +324,35 @@
   padding-right: 130px;
 }
 
-.social-item {
-  width: 81px;
-  height: 81px;
+.social-button {
   background-color: var(--basic-gradient-white);
-  text-align: center;
+}
+
+.vk {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 27px;
+  padding-right: 28px;
   border-radius: 50%;
+}
+
+.fb {
+  padding-top: 33px;
+  padding-bottom: 26px;
+  padding-left: 35px;
+  padding-right: 34px;
+  border-radius: 50%;
+}
+
+.inst {
+  padding-top: 34px;
+  padding-bottom: 26px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 50%;
+}
+
+.social-item {
   margin-right: 9px;
 }
 
@@ -380,7 +403,6 @@
   flex-direction: column;
   justify-content: space-around;
   max-width: 260px;
-  max-height: auto;
 }
 
 .form-name {
@@ -389,6 +411,8 @@
   line-height: 30px;
   color: var(--basic-black);
   text-transform: uppercase;
+  margin: 0;
+  padding: 0;
 }
 
 .catalog-button {
@@ -428,7 +452,7 @@
 
 .box-sort-list {
   flex-grow: 1;
-  align-self: flex-start;
+  align-self: center;
 }
 
 .templates-list {
