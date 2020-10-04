@@ -63,6 +63,7 @@
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
+  overflow-x: hidden;
 }
 
 .main-header {
@@ -112,7 +113,8 @@
 .partners-list,
 .pagination-list,
 .sort-list,
-.slider-list {
+.slider-list,
+.tasks-list {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -206,11 +208,15 @@
   right: 10px;
 }
 
+.slider-list {
+  position: relative;
+}
+
 .slider-controls {
   display: flex;
   position: absolute;
-  bottom: 20px;
-  left: 500px;
+  bottom: 23%;
+  left: 48%;
 }
 
 .slider-button {
@@ -225,9 +231,12 @@
   margin-right: 17px;
   padding: 5px 5px;
   cursor: pointer;
+  position: relative;
 }
 
-.current-slide {
+.current-slide:before {
+  content: "";
+  position: absolute;
   padding: 2px 2px;
   border: 2px solid var(--basic-grey-controls);
   border-radius: 50%;
@@ -344,8 +353,7 @@
 }
 
 .tasks-list {
-  list-style: none;
-  margin: 5px 0;
+  margin: 5px 35px;
   padding-top: 5px;
 }
 
@@ -361,7 +369,7 @@
   background-color: var(--basic-light-red);
   position: absolute;
   top: 23px;
-  left: -38px;
+  left: -35px;
 }
 
 .advantages-text {
@@ -379,7 +387,10 @@
   color: var(--basic-black);
   padding-top: 12px;
   padding-bottom: 10px;
-  padding-right: 10px;
+  padding-right: 15px;
+}
+.percent-font {
+  font-size: 26px;
 }
 
 .advantages-name {
