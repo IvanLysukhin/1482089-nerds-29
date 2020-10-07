@@ -2,11 +2,16 @@
   --basic-black: #000000;
   --basic-black-opacity: rgba(0, 0, 0, 0.3);;
   --basic-grey-controls: #C1C1C1;
+  --basic-filter-darkgrey: #4D4D4D;
   --basic-dark-grey: #283136;
   --basic-light-grey: #EEEEEE;
   --basic-lighter-grey: #666666;
   --basic-button-grey: #DFDFDF;
+  --basic-filter-scale-grey: #D7DCDF;
+  --basic-filter-toggle-grey: #ABABAB;
   --basic-button-dark-grey: #D5D5D5;
+  --basic-border-light-grey: #D7DCDE;
+  --basic-border-dark-grey: #B4B9BB;
   --basic-template-color: rgba(77, 77, 77, 0.12);
   --basic-template-color-dark: rgba(77, 77, 77, 1);
   --basic-white: #FFFFFF;
@@ -117,7 +122,9 @@
 .pagination-list,
 .sort-list,
 .slider-list,
-.tasks-list {
+.tasks-list,
+.radio-list,
+.check-list {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -684,6 +691,9 @@
   background-color: var(--basic-light-grey);
   width: 260px;
   height: 50px;
+  border-radius: 3px;
+  margin-top: 25px;
+  cursor: pointer;
 }
 
 .form-button:hover {
@@ -857,11 +867,13 @@
   padding: 15px 77px;
 }
 
-.pagination-item:hover {
+.pagination-item:hover,
+.catalog-button:hover {
   background-color: var(--basic-button-grey);
 }
 
-.pagination-item:active {
+.pagination-item:active,
+.catalog-button:active {
   color: var(--basic-black-opacity);
   box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
 }
@@ -895,5 +907,285 @@
 
 .active,
 .sort-item:active {
+  opacity: 1;
+}
+.modal {
+  position: fixed;
+  left: 23.4%;
+  top: 18%;
+  background-color: var(--basic-white);
+  width: 760px;
+  height: 440px;
+  padding-top: 63px;
+  padding-bottom: 63px;
+  padding-left: 85px;
+  padding-right: 90px;
+  font-size: 16px;
+  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.modal-big-text {
+  font-size: 45px;
+  font-weight: bold;
+  padding: 10px;
+  padding-left: 12px;
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.feedback-box {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 12px;
+  width: 740px;
+}
+
+.field-box {
+  width: 340px;
+  padding: 6px 0;
+  margin: 0 0;
+  border: none;
+  margin-bottom: 10px;
+}
+
+.field-box:first-of-type {
+  margin-right: 60px;
+}
+
+.field-box:last-of-type {
+  width: 100%;
+}
+
+.label-text {
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.input-box {
+  font-family: inherit;
+  font-size: inherit;
+  width: 100%;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  padding-left: 16px;
+  border: 2px solid var(--basic-border-light-grey);
+  border-radius: 3px;
+  vertical-align: top;
+  margin-bottom: 10px;
+}
+
+.feedback-box .button {
+  border: none;
+  margin-top: 15px;
+  padding-left: 83px;
+  padding-right: 83px;
+}
+
+.field-box:hover .input-box {
+  border-color: var(--basic-border-dark-grey);
+}
+
+.input-box:focus {
+  border-color: var(--basic-black);
+  color: var(--basic-black);
+}
+
+.close {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 75px;
+  right: 60px;
+}
+
+.close-pic {
+  opacity: 0.3;
+}
+
+.close:hover .close-pic {
+  opacity: 1;
+}
+
+.close:active .close-pic {
+  opacity: 0.1;
+}
+
+.filter-box {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+
+.range-filter {
+  width: 260px;
+  margin-top: 48px;
+}
+
+.range-controls {
+  height: 41px;
+  background-color: var(--basic-light-grey);
+  border-radius: 3px;
+  margin-bottom: 11px;
+  padding-top: 39px;
+  padding-left: 22px;
+  padding-right: 22px;
+  position: relative;
+}
+
+.scale {
+ height: 2px;
+ background-color: var(--basic-filter-scale-grey);
+}
+
+.bar {
+  height: 2px;
+  width: 50%;
+  background-color: var(--basic-green);
+
+}
+
+.toggle {
+  height: 4px;
+  width: 4px;
+  background-color: var(--basic-filter-toggle-grey);
+  border: 8px solid var(--basic-white);
+  border-radius: 50%;
+  position: absolute;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.15);
+  top: 31px;
+  left: 0;
+  cursor: pointer;
+}
+
+.toggle-min {
+   left: 20px;
+}
+
+.toggle-max {
+  left: 120px;
+}
+
+.price-controls {
+   font-size: 16px;
+   line-height: 22px;
+   text-transform: uppercase;
+   display: flex;
+   justify-content: space-between;
+}
+
+.price-box {
+  font-size: inherit;
+  width: 80px;
+  height: 36px;
+  background-color: var(--basic-light-grey);
+  border: none;
+  border-radius: 3px;
+  text-align: center;
+  margin-left: 11px;
+}
+
+.filter-box:nth-of-type(2) {
+  margin-top: 54px;
+  margin-bottom: 43px;
+}
+
+.radio-item {
+  margin-top: 18px;
+}
+
+.radio-list :first-child{
+ margin-bottom: 20px;
+}
+
+.radio-name,
+.checkbox-name {
+  display: block;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  padding-left: 36px;
+}
+
+.input-radio + .radio-name:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -3px;
+  width: 25px;
+  height: 25px;
+  background-image: url(../img/radio-off.svg);
+  /* width: 17px;
+  height: 17px;
+  border: 4px solid var(--basic-filter-darkgrey);
+  border-radius: 50%; */
+  opacity: 0.4;
+}
+.input-radio:checked + .radio-name:before {
+  display: none;
+}
+
+.input-radio:checked + .radio-name:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -3px;
+  width: 25px;
+  height: 25px;
+  background-image: url(../img/radio-on.svg);
+  background-color: var(--basic-white);
+  /* left: 7.7px;
+  top: 4.5px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: var(--basic-filter-darkgrey); */
+  opacity: 0.4;
+}
+
+
+
+.check-list {
+  margin-top: 20px;
+}
+
+.check-item {
+  margin-bottom: 22px;
+}
+
+
+.input-checbox + .checkbox-name:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -2px;
+  width: 23px;
+  height: 23px;
+  background-image: url(../img/checkbox-off.svg);
+  opacity: 0.4;
+}
+
+.input-checbox:checked  + .checkbox-name:before {
+  display: none;
+}
+
+.input-checbox:checked + .checkbox-name:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -2px;
+  width: 25px;
+  height: 23px;
+  background-image: url(../img/checkbox-on.svg);
+  /* background-color: var(--basic-white); */
+  opacity: 0.4;
+}
+
+.input-radio:hover + .radio-name:before,
+.input-radio:hover:checked + .radio-name:after,
+.input-checbox:hover + .checkbox-name:before,
+.input-checbox:checked + .checkbox-name:after {
   opacity: 1;
 }
