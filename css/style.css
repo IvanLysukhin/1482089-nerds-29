@@ -911,8 +911,11 @@
 }
 .modal {
   position: fixed;
-  left: 23.4%;
-  top: 18%;
+  /* display: none; */
+  z-index: 100;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
   background-color: var(--basic-white);
   width: 760px;
   height: 440px;
@@ -982,13 +985,19 @@
   padding-right: 83px;
 }
 
-.field-box:hover .input-box {
+.input-box:hover  {
   border-color: var(--basic-border-dark-grey);
 }
 
 .input-box:focus {
   border-color: var(--basic-black);
   color: var(--basic-black);
+}
+
+.input-box:invalid {
+  box-shadow: none;
+  border-color: var(--basic-dark-red);
+  color: var(--basic-dark-red);
 }
 
 .close {
@@ -1145,7 +1154,9 @@
   opacity: 0.4;
 }
 
-
+.input-radio[disabled] + .radio-name {
+  opacity: 0.1;
+}
 
 .check-list {
   margin-top: 20px;
@@ -1154,7 +1165,6 @@
 .check-item {
   margin-bottom: 22px;
 }
-
 
 .input-checbox + .checkbox-name:before {
   content: "";
@@ -1183,7 +1193,7 @@
   opacity: 0.4;
 }
 
-.input-radio:hover + .radio-name:before,
+.input-radio:not([disabled]):hover + .radio-name:before,
 .input-radio:hover:checked + .radio-name:after,
 .input-checbox:hover + .checkbox-name:before,
 .input-checbox:checked + .checkbox-name:after {
