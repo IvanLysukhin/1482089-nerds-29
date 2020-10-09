@@ -492,14 +492,16 @@
   padding-top: 75px;
 }
 
-.map-box {
-  flex-shrink: 1;
+.map {
+  width: 100%;
+  height: 416px;
+  border:0;
 }
 
 .contact-box {
   position: absolute;
   background-color: var(--basic-white);
-  left: 0px;
+  left: 320px;
   top: 55px;
   width: 220px;
   height: 300px;
@@ -509,8 +511,8 @@
 }
 
 .contacts {
-  display: flex;
-  justify-content: center;
+  /* display: flex;
+  justify-content: center; */
   position: relative;
   line-height: 18px;
   color: var(--basic-lighter-grey);
