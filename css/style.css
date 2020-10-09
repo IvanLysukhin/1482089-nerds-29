@@ -1199,3 +1199,10 @@
 .input-checbox:checked + .checkbox-name:after {
   opacity: 1;
 }
+
+.input-radio:not([disabled]):focus + .radio-name:before,
+.input-radio:focus:checked + .radio-name:after,
+.input-checbox:focus + .checkbox-name:before,
+.input-checbox:focus + .checkbox-name:after {
+  outline: 2px solid var(--basic-black);
+}
