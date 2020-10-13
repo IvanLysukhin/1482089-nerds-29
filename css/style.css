@@ -27,6 +27,11 @@
   --basic-darkest-yellow: #E5A722;
   --basic-gradient-red: #E74246;
   --basic-gradient-dark-red: #D7373B;
+  --basic-button-text-opacity: rgba(255, 255, 255, 0.3);
+  --basic-shadow: rgba(0, 1, 1, 0.1);
+  --basic-templates-shadow: rgba(0, 1, 1, 0.25);
+  --basic-modal-shadow: rgba(0, 0, 0, 0.4);
+  --basic-toggle-shadow: rgba(0, 0, 0, 0.15);
 }
 
 /*Fonts*/
@@ -275,9 +280,9 @@
 }
 
 .button:active {
-  color: rgba(255, 255, 255, 0.3);
+  color: var(--basic-button-text-opacity);
   background-color: var(--basic-darkest-red);
-  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+  box-shadow: inset 0px 3px 0px var(--basic-shadow);
 }
 
 .services-title {
@@ -322,7 +327,7 @@
 
 .button-green:active {
   background-color: var(--basic-darkest-green);
-  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+  box-shadow: inset 0px 3px 0px var(--basic-shadow);
 }
 
 .button-yellow {
@@ -335,7 +340,7 @@
 
 .button-yellow:active {
   background-color: var(--basic-darkest-yellow);
-  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+  box-shadow: inset 0px 3px 0px var(--basic-shadow);
 }
 
 .studio-description {
@@ -493,12 +498,26 @@
   padding-top: 75px;
 }
 
-.map {
+.map-box {
+    position: relative;
+    bottom: 118px;
+}
+
+.map{
   position: absolute;
   width: 100%;
   height: 416px;
   border: 0;
   bottom: -118px;
+}
+
+.map-back {
+  position: absolute;
+  height: 416px;
+  border: 0;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -71.5%);
 }
 
 .contact-box {
@@ -572,7 +591,7 @@
 
 .social-button:active {
   background-color: var(--basic-darkest-red);
-  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+  box-shadow: inset 0px 3px 0px var(--basic-shadow);
 }
 
 .social-button:active .social-pic {
@@ -793,7 +812,7 @@
 }
 
 .templates-item:hover {
-  box-shadow: 0px 6px 15px rgba(0, 1, 1, 0.25);
+  box-shadow: 0px 6px 15px var(--basic-templates-shadow);
 }
 
 .pagination-list {
@@ -882,7 +901,7 @@
 .pagination-item:active,
 .catalog-button:active {
   color: var(--basic-black-opacity);
-  box-shadow: inset 0px 3px 0px rgba(0, 1, 1, 0.1);
+  box-shadow: inset 0px 3px 0px var(--basic-shadow);
 }
 
 .current {
@@ -932,7 +951,11 @@
   padding-left: 85px;
   padding-right: 90px;
   font-size: 16px;
-  box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 20px 40px var(--basic-modal-shadow);
+}
+
+.modal-open {
+  display: block;
 }
 
 .modal-big-text {
@@ -970,6 +993,7 @@
 .label-text {
   font-weight: bold;
   display: inline-block;
+  vertical-align: middle;
   margin-bottom: 5px;
 }
 
@@ -1002,7 +1026,7 @@
   color: var(--basic-black);
 }
 
-.input-box:invalid {
+.required {
   box-shadow: none;
   border-color: var(--basic-dark-red);
   color: var(--basic-dark-red);
@@ -1069,7 +1093,7 @@
   border: 8px solid var(--basic-white);
   border-radius: 50%;
   position: absolute;
-  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 2px 1px var(--basic-toggle-shadow);
   top: 31px;
   left: 0;
   cursor: pointer;
@@ -1173,7 +1197,7 @@
   margin-bottom: 22px;
 }
 
-.input-checbox+.checkbox-name:before {
+.input-checkbox+.checkbox-name:before {
   content: "";
   position: absolute;
   left: 0;
@@ -1184,11 +1208,11 @@
   opacity: 0.4;
 }
 
-.input-checbox:checked+.checkbox-name:before {
+.input-checkbox:checked+.checkbox-name:before {
   display: none;
 }
 
-.input-checbox:checked+.checkbox-name:after {
+.input-checkbox:checked+.checkbox-name:after {
   content: "";
   position: absolute;
   left: 0;
@@ -1202,14 +1226,14 @@
 
 .input-radio:not([disabled]):hover+.radio-name:before,
 .input-radio:hover:checked+.radio-name:after,
-.input-checbox:hover+.checkbox-name:before,
-.input-checbox:checked+.checkbox-name:after {
+.input-checkbox:hover+.checkbox-name:before,
+.input-checkbox:hover:checked+.checkbox-name:after {
   opacity: 1;
 }
 
 .input-radio:not([disabled]):focus+.radio-name:before,
 .input-radio:focus:checked+.radio-name:after,
-.input-checbox:focus+.checkbox-name:before,
-.input-checbox:focus+.checkbox-name:after {
+.input-checkbox:focus+.checkbox-name:before,
+.input-checkbox:focus+.checkbox-name:after {
   outline: 2px solid var(--basic-black);
 }
