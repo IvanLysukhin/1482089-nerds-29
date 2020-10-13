@@ -15,15 +15,19 @@ openButton.addEventListener("click", function(evt) {
 feedbackFrom.addEventListener("submit", function(evt) {
   if (!nameForm.value || !emailForm.value || !letterForm.value) {
     evt.preventDefault();
+    popup.classList.add('error');
   };
   if (!nameForm.value) {
     nameForm.classList.add('required');
+    popup.classList.add('error');
   };
   if (!emailForm.value) {
     emailForm.classList.add('required');
+    popup.classList.add('error');
   };
   if (!feedbackFrom.value) {
     letterForm.classList.add('required');
+    popup.classList.add('error');
   };
 });
 
