@@ -945,9 +945,6 @@
   margin:auto;
   left:0;
   right:0;
-  /* left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%); */
   background-color: var(--basic-white);
   width: 760px;
   height: 440px;
